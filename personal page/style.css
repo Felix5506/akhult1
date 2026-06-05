@@ -1,0 +1,531 @@
+/* 1. GLOBAL THEME & FONTS (Dark Mode Overhaul)*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+body {
+    background-color: #141814; 
+    color: #b2bcbb; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+a {
+    color: #8fa482; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #b1c7a3;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    color: #e2e8e7; 
+    letter-spacing: -0.02em;
+}
+
+header, main {
+    background: #1b201b; 
+    border: 1px solid #242b24;
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Deep dark shadow */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-brand h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    text-transform: lowercase;
+    color: #8fa482; 
+}
+
+.header-pfp {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: #242b24;
+    border: 1px solid #2e372e;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    background: #131713; 
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #1c221c;
+}
+
+nav a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    color: #798584;
+    border-radius: 7px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #e2e8e7;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+nav a.active {
+    background: #1b201b;
+    color: #8fa482;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.intro h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #94a1a0;
+    margin-bottom: 25px;
+}
+
+.quick-stats ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.quick-stats li {
+    background: #151915;
+    border: 1px solid #242b24;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.quick-stats strong {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #61705c; 
+    margin-bottom: 2px;
+}
+
+.status-zone h3 {
+    font-size: 1.1rem;
+    border-bottom: 2px solid #131713;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.status-zone ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.status-item {
+    font-size: 1rem;
+}
+
+.status-item strong {
+    color: #e2e8e7;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    background: #242b24;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    border: 1px solid #2e372e;
+}
+
+.player-wrapper {
+    max-width: 450px;
+    margin-top: 15px;
+}
+
+.player-wrapper iframe {
+    border: 1px solid #242b24 !important;
+}
+
+.status-image-container {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #242b24;
+}
+
+.status-img {
+    width: 100%;
+    display: block;
+    height: auto;
+    opacity: 0.9; 
+}
+
+/* 5. INTERESTS PAGE TABLES */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.interest-block h3 {
+    font-size: 0.85rem;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #61705c;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #242b24;
+    padding-bottom: 8px;
+}
+
+.media-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.media-table th {
+    text-align: left;
+    font-weight: 500;
+    color: #556353;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 8px;
+}
+
+.media-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #131713;
+}
+
+.media-table tr:last-child td {
+    border-bottom: none;
+}
+
+.media-table td:last-child {
+    color: #94a1a0;
+    padding-left: 15px;
+}
+
+/* 6. UPDATES TIMELINE */
+.updates-intro {
+    color: #798584;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.update-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+    border-bottom: 1px solid #131713;
+}
+
+.update-entry:last-child {
+    border-bottom: none;
+}
+
+.update-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.update-meta time {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: #61705c;
+}
+
+.update-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.tag-code { background: #132418; color: #6dbf7a; border: 1px solid #1c3d25; }
+.tag-general { background: #14222c; color: #6da2bf; border: 1px solid #1c3547; }
+
+.update-content h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.15rem;
+}
+
+.update-content p {
+    margin: 0;
+    color: #acb6b5;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 600px) {
+    .update-entry { flex-direction: row; }
+    .update-meta { flex-direction: column; align-items: flex-start; min-width: 140px; gap: 8px; }
+}
+
+/* 7. SOCIALS CARDS*/
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 500px;
+}
+
+.social-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: #151915;
+    border: 1px solid #242b24;
+    border-radius: 12px;
+    color: #e2e8e7 !important;
+}
+
+.social-card:hover {
+    transform: translateY(-2px);
+    background: #1b201b;
+    border-color: #8fa482;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-info h3 { margin: 0 0 4px 0; font-size: 1.05rem; }
+.card-info p { margin: 0; font-size: 0.85rem; color: #798584; }
+.card-arrow { color: #61705c; font-size: 1.1rem; transition: transform 0.2s; }
+.social-card:hover .card-arrow { transform: translateX(3px); color: #8fa482; }
+
+.github-accent { border-left: 4px solid #48724d; }
+.portfolio-accent { border-left: 4px solid #436375; }
+.gaming-accent { border-left: 4px solid #855368; }
+
+/* 8. EXPANDABLE TABLE ROWS (Interests Previews) */
+
+.expandable-row {
+    padding: 0 !important; 
+}
+
+.expandable-row details {
+    width: 100%;
+}
+
+.expandable-row summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+}
+
+.expandable-row summary::-webkit-details-marker {
+    display: none;
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #e2e8e7;
+}
+
+.skill-desc {
+    color: #94a1a0;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.click-hint {
+    font-size: 0.75rem;
+    color: #61705c;
+    font-style: italic;
+    margin-left: 4px;
+}
+
+.expandable-row details[open] .click-hint {
+    color: #8fa482;
+    content: "(click to close)";
+}
+
+.expanded-preview {
+    background: #131713;
+    border: 1px solid #242b24;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    margin-top: 4px;
+}
+
+.expanded-preview p {
+    margin: 0 0 12px 0;
+    font-size: 0.85rem;
+    color: #798584;
+}
+
+.preview-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #2e372e;
+    display: block;
+}
+
+/* 9. INTERACTIVE ANIMATION & EFFECTS OVERHAUL*/
+
+main {
+    animation: pageReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageReveal {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glitch-text {
+    position: relative;
+    display: inline-block;
+    transition: color 0.1s ease;
+}
+
+.glitch-text:hover {
+    animation: textGlitch 0.25s linear infinite;
+    color: #ff5599;
+    cursor: help;
+}
+
+@keyframes textGlitch {
+    0% {
+        text-shadow: 1.5px -1px 0 #8fa482, -1px 1.5px 0 #6da2bf;
+    }
+    33% {
+        text-shadow: -1px 1.5px 0 #8fa482, 1.5px 1px 0 #6da2bf;
+    }
+    66% {
+        text-shadow: 1.5px 1.5px 0 #ff5599, -1.5px -1px 0 #6da2bf;
+    }
+    100% {
+        text-shadow: -1.5px 1px 0 #ff5599, 1px -1.5px 0 #8fa482;
+    }
+}
+
+.scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.scanline::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 20px;
+    background: linear-gradient(
+        to bottom,
+        rgba(143, 164, 130, 0) 0%,
+        rgba(143, 164, 130, 0.08) 50%, 
+        rgba(143, 164, 130, 0) 100%
+    );
+    opacity: 0.8;
+    will-change: transform;
+    animation: crtScanlineBeam 4s linear infinite;
+}
+
+@keyframes crtScanlineBeam {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.social-card {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.3s ease, 
+                border-color 0.3s ease, 
+                background-color 0.2s ease;
+}
+
+.social-card:hover {
+    transform: translateX(6px) translateY(-1px);
+    background-color: #1f251f;
+}
+
+.github-accent:hover {
+    border-color: #8fa482;
+    box-shadow: 0 0 20px rgba(143, 164, 130, 0.15);
+}
+
+.portfolio-accent:hover {
+    border-color: #6da2bf;
+    box-shadow: 0 0 20px rgba(109, 162, 191, 0.15);
+}
+
+.gaming-accent:hover {
+    border-color: #9c647c;
+    box-shadow: 0 0 20px rgba(156, 100, 124, 0.15);
+}
+
+.expandable-row details[open] .expanded-preview {
+    animation: slideReveal 0.25s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-5px) scale(0.99);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
